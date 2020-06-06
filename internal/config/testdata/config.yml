@@ -1,0 +1,15 @@
+debug: false
+darktable-cli: /usr/bin/darktable-cli
+assets-path: /srv/photoprism
+cache-path: /srv/photoprism/cache
+originals-path: /srv/photoprism/photos/originals
+import-path: /srv/photoprism/photos/import
+temp-path: /srv/photoprism/temp
+http-host:
+http-mode: release
+http-port: 81
+http-password:
+database-driver: sqlite
+database-dsn: .photoprism.db
+theme: lavendel
+language: english

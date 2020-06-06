@@ -1,0 +1,17 @@
+/photos/*
+/frontend/node_modules/*
+/node_modules
+/assets/static/build/*
+/assets/nasnet
+/assets/nsfw
+/storage
+/photoprism
+/coverage.*
+/frontend/tests/acceptance/screenshots
+.dockerignore
+.idea
+.DS_Store
+*.db
+*.db-journal
+Dockerfile
+docker-compose*
