@@ -1,4 +1,4 @@
-module github.com/photoprism/photoprism
+module github.com/Nepmia/Design-UI
 
 require (
 	github.com/allegro/bigcache v1.2.1

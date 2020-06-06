@@ -20,7 +20,7 @@ class Config {
             this.debug = true;
             this.values = {};
             this.page = {
-                title: "PhotoPrism",
+                title: "Design UI",
             };
             return;
         }
