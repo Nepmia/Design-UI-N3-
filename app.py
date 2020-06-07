@@ -47,6 +47,6 @@ def custom_static(filename):
 
 
 if __name__ == '__main__':
-    app.logger.info('Listening on http://localhost:8000')
+    app.logger.info('Listening on http://localhost:2000')
     app.logger.info(f'allowed extensions: {settings.UPLOAD_ALLOWED_EXTENSIONS}')
-    app.run(port=8000, debug=True)
+    app.run(port=2000, debug=True)
