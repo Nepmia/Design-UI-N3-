@@ -8,5 +8,4 @@ app = Flask(__name__,
 @app.route('/')
 @app.route('/N3/')
 def dsuimain(name=None):
-    return render_template('base.html')
-    return ptint(template.render(title="Home"))
+    return render_template('base.html', title= 'Home')
