@@ -1,0 +1,112 @@
+/* Nav bar transi */
+.navbar{
+    transition: 0.5s ease !important;
+}
+/* Diabled dimgray & Nepmia-gray */
+.disabled {
+    color: #ffffffbd !important;
+}
+.nepmia-gray{
+    background-color: #3f3f3f !important;
+}
+.transitionB{
+    transition: 0.5s ease;
+}
+/* Brand logo hover effect */
+#SPNG:hover .SPNGdim{
+    opacity: 1;
+    transition: 0.5s ease;
+}
+.SPNGdim{
+    transition: 0.5s ease;
+    opacity: 0;
+}
+#SPNGhover{
+    margin-left: -50px !important;
+}
+/* /.Brand logo hover effect */
+/* Get Started btn arrow */
+.down-pulse{
+    animation: downPulse 2s ease infinite !important;
+    transform: translateY(0px);
+}
+
+@keyframes downPulse{
+    0%{
+        transform: translateY(0px);
+    }
+    40%{
+        transform: translateY(0px);
+    }
+    50%,70%{
+        transform: translateY(3px);
+    }   
+    60%,80%{
+        transform: translateY(0px);
+    }
+    85%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+/* /.Get Started btn arrow */
+/* Hidden and visible classes */
+.hidden{
+    opacity: 0 !important;
+    transition: 0.2s ease !important;
+}
+.visible{
+    opacity: 1 !important;
+    transition: 0.2s ease !important;
+}
+/* /.Hidden and visible classes */
+/* btnShine */
+@keyframes shine {
+    0% { -webkit-mask-position: 200%; }
+    50% { -webkit-mask-position: -0%; }
+    100%{-webkit-mask-position: -0%;}
+}
+.btnShine{
+    z-index: 100;
+    position: absolute;
+    background-color: white;
+    -webkit-mask-image: linear-gradient(-75deg,rgba(0,0,0,.1) 0%,rgba(0,0,0,.1) 19.5%,rgba(0,0,0,.7) 20%, rgba(0,0,0,.7) 23%, rgba(0,0,0,.5) 23.3%,rgba(0,0,0,.5) 25%, rgba(0,0,0,.3) 25.3%, rgba(0,0,0,.1)100%);
+    -webkit-mask-size: 200%;
+    pointer-events: none;
+}
+.btnShineAN{
+    animation: shine 3s linear infinite;
+}
+#getSbtn:hover .btnShine{
+    opacity: 0;
+    transition: 0.5s ease !important;
+}
+/* /.btnShine */
+/* DevAlert */
+.devalerton{
+    height: 10%;
+    bottom: 0%; 
+    background-color: rgba(0,0,255,0);
+    transition: 1s ease;
+}
+.devalertoff{
+    height: 10%;
+    bottom: -100%; 
+    background-color: rgba(0,0,255,0);
+    transition: 1s ease-in;
+}
+/* /.DevAlert */
+/* cardHover */
+.cardHoverN{
+    transition: 0.5s ease !important;
+    transform: translateY(0%) !important;
+    margin-top: 0% !important;
+}
+.cardHoverH{
+    transition: 0.5s ease !important;
+    margin-top: 0% !important;
+    transform: translateY(-5%) !important;
+}
