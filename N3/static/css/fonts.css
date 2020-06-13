@@ -72,21 +72,27 @@
 }
 .ubuntu {
     font-family: ubunturegular;
+    transition: 0.5s ease;
 }
 .ubuntui {
     font-family: ubuntumedium_italic;
+    transition: 0.5s ease;
 }
 .ubuntuB {
     font-family: ubuntubold;
+    transition: 0.5s ease;
 }
 .ubuntuBi {
     font-family: ubuntubold_italic;
+    transition: 0.5s ease;
 }
 .ubuntuL {
     font-family: ubuntulight;
+    transition: 0.5s ease;
 }
 .ubuntuLi {
     font-family: ubuntulight_italic;
+    transition: 0.5s ease;
 }
 .tw{
     color: white;
