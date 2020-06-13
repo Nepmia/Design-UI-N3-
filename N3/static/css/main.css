@@ -42,3 +42,8 @@
 #SPNGI{
     transition: 0.5s cubic-bezier(.77,.07,.71,.94);
 }
+.dsui-container{
+    width: 98%;
+    height: 98%;
+    margin: 1%;
+}

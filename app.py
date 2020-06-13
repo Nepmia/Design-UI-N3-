@@ -1,4 +1,6 @@
+import os
 from flask import Flask, render_template
+
 
 app = Flask(__name__,
             static_url_path='', 
@@ -8,4 +10,5 @@ app = Flask(__name__,
 @app.route('/')
 @app.route('/N3/')
 def dsuimain(name=None):
-    return render_template('base.html', title= 'Home')
+    images = os.listdir(os.path.join(app.static_folder, "demilsez"))
+    return render_template('base.html', images=images)

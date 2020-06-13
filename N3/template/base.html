@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Main css rules -->
   <link rel="stylesheet" href="css/main.css">
-  <!-- Other self-hosted fonts -->
+  <!-- self-hosted fonts -->
   <link rel="stylesheet" href="css/fonts.css">
 </head>
 <body class="nepmia-gray" style="height: 10000px;">
@@ -56,8 +56,10 @@
 </div>
 <!-- /.DevAlert-->
 <!--- Content --->
-<div class="primary-color" style="width: 98%;height: 98%;margin: 1%;" >
-
+<div class="d-flex flex-wrap dsui-container">
+  {% for images in demilsez %}
+      <img class="kek" src="{{ img.url }}">
+  {% endfor %}
 </div>
 
 
