@@ -10,5 +10,5 @@ app = Flask(__name__,
 @app.route('/')
 @app.route('/N3/')
 def dsuimain(name=None):
-    images = os.listdir(os.path.join(app.static_folder, "demilsez"))
-    return render_template('base.html', images=images)
+    demilsez = os.listdir(os.path.join(app.static_folder, "demilsez"))
+    return render_template('base.html', demilsez=demilsez)

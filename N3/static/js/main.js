@@ -27,3 +27,11 @@ window.onload = function(){
     $("#devalert").removeClass('devalertoff').addClass('devalerton');
 };
 /* /.DevAlert */
+
+$(document).ready(function(){
+    $('.dsui-img-container').hover(function(){
+        $(this).addClass('z-depth-5').removeClass('z-depth-1');
+    }, function(){
+        $(this).removeClass('z-depth-5').addClass('z-depth-1');
+    })
+})

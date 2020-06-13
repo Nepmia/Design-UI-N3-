@@ -20,7 +20,7 @@
   <!-- self-hosted fonts -->
   <link rel="stylesheet" href="css/fonts.css">
 </head>
-<body class="nepmia-gray" style="height: 10000px;">
+<body class="nepmia-gray">
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark transparent sticky-top py-md-0 py-0">
   <!-- Brand -->
@@ -56,12 +56,15 @@
 </div>
 <!-- /.DevAlert-->
 <!--- Content --->
-<div class="d-flex flex-wrap dsui-container">
-  {% for images in demilsez %}
-      <img class="kek" src="{{ img.url }}">
+<div class="dsui-container">
+<div class="flex-wrap dsui-subcontainer">
+  {% for img in demilsez %}
+  <div class="dsui-img-container z-depth-1" data-tilt>
+    <img width="250" height="250" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img view overlay ">
+  </div>
   {% endfor %}
 </div>
-
+</div>
 
 <!--- /.Content --->
 <!-- End -->
