@@ -56,7 +56,7 @@
 </div>
 <!-- /.DevAlert-->
 <!--- Content --->
-<div class="dsui-container vh-100">
+<div class="dsui-container">
 <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
   {% for img in demilsez %}
   <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
@@ -66,6 +66,39 @@
   {% endfor %}
 </div>
 </div>
+
+<div class="dsui-container">
+  <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
+    {% for img in demildiset %}
+    <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
+      <img width="150" height="150" src="{{url_for("static", filename="demildiset/" + img)}}" class="dsui-img" style="pointer-events: none;">
+      <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+
+  <div class="dsui-container">
+    <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
+      {% for img in demildihouit %}
+      <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
+        <img width="150" height="150" src="{{url_for("static", filename="demildihouit/" + img)}}" class="dsui-img" style="pointer-events: none;">
+        <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
+      </div>
+      {% endfor %}
+    </div>
+    </div>
+
+    <div class="dsui-container">
+      <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
+        {% for img in demildineuf %}
+        <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
+          <img width="150" height="150" src="{{url_for("static", filename="demildineuf/" + img)}}" class="dsui-img" style="pointer-events: none;">
+          <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
+        </div>
+        {% endfor %}
+      </div>
+      </div>
 
 <!--- /.Content --->
 <!-- End -->
