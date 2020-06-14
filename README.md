@@ -12,4 +12,4 @@ This app is a  **NEP 3 Gen** app.
 
 ## Licensing
 
-**DSUI** was made especialy to display my portfolio and it wasn't created to be used anywhere else than my own webserver, but if you understand how it works and want to re-use **DSUI**, you can only if you fork without editing the templates to remove / add things. (ofc you can use your images)
+**DSUI** was made especialy to display my portfolio and it wasn't created to be used anywhere else than my own webserver.
