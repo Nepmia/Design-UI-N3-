@@ -14,4 +14,5 @@ def dsuimain(name=None):
     demildiset = os.listdir(os.path.join(app.static_folder, "demildiset"))
     demildihouit = os.listdir(os.path.join(app.static_folder, "demildihouit"))
     demildineuf = os.listdir(os.path.join(app.static_folder, "demildineuf"))
-    return render_template('base.html', demilsez=demilsez, demildiset=demildiset, demildihouit=demildihouit, demildineuf=demildineuf)
+    demilvin = os.listdir(os.path.join(app.static_folder, "demilvin"))
+    return render_template('base.html', demilsez=demilsez, demildiset=demildiset, demildihouit=demildihouit, demildineuf=demildineuf, demilvin=demilvin)

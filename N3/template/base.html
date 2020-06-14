@@ -100,6 +100,17 @@
       </div>
       </div>
 
+      <div class="dsui-container">
+        <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
+          {% for img in demilvin %}
+          <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
+            <img width="150" height="150" src="{{url_for("static", filename="demilvin/" + img)}}" class="dsui-img" style="pointer-events: none;">
+            <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
+          </div>
+          {% endfor %}
+        </div>
+        </div>
+
 <!--- /.Content --->
 <!-- End -->
   <!-- jQuery -->
