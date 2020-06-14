@@ -30,8 +30,8 @@ window.onload = function(){
 
 $(document).ready(function(){
     $('.dsui-img-container').hover(function(){
-        $(this).addClass('z-depth-5').removeClass('z-depth-1');
+        $(this).find('p').addClass('visibleDSH').removeClass('hiddenDSH');
     }, function(){
-        $(this).removeClass('z-depth-5').addClass('z-depth-1');
+        $(this).find('p').removeClass('visibleDSH').addClass('hiddenDSH');
     })
 })

@@ -22,7 +22,7 @@
 </head>
 <body class="nepmia-gray">
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark transparent sticky-top py-md-0 py-0">
+<nav class="navbar navbar-expand-lg navbar-dark transparent fixed-top py-md-0 py-0">
   <!-- Brand -->
   <a class="navbar-brand" id="SPNG" href="#"><div data-tilt><img id="SPNGI" width="50" height="50" src="img/svg/SPNG.svg"/></div></a>
   <!-- Collapse button -->
@@ -48,7 +48,7 @@
 <!-- DevAlert -->
 <div class="w-100 p-3 position-fixed d-flex flex-row-reverse devalertoff h-auto" id="devalert" style="z-index: 100;">
 <div class="d-flex justify-content-center rounded-lg primary-color z-depth-1" style="background-color: rgba(0,0,255,.5);z-index: 100;width: 900px;">
-<div class="align-self-center al p-3 text-justify ubuntu tw" style="text-align: center;">
+<div class="align-self-center al p-3 ubuntu tw" style="text-align: center;">
   <strong class="ubuntuB">Attention!</strong> This website is still in developpement, it's design and features could change at anymoment.
   </div>
   <div class="btn secondary-color align-self-center rounded-lg" id="devalertbtn" data-tilt><span class="ubuntuB tw">OK</span></div>
@@ -56,11 +56,12 @@
 </div>
 <!-- /.DevAlert-->
 <!--- Content --->
-<div class="dsui-container">
-<div class="flex-wrap dsui-subcontainer">
+<div class="dsui-container vh-100">
+<div class="flex-wrap dsui-subcontainer ">
   {% for img in demilsez %}
-  <div class="dsui-img-container z-depth-1" data-tilt>
-    <img width="250" height="250" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img view overlay ">
+  <div class="dsui-img-container z-depth-1 hoverable" data-tilt>
+    <img width="250" height="250" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img">
+    <p class="dsui-hover hiddenDSH ubuntuB">{{img}}</p>
   </div>
   {% endfor %}
 </div>
