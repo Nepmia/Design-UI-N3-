@@ -10,6 +10,15 @@ $(document).ready(function() {
       }
     });
   });
+  $(document).ready(function() {
+      if($(this).scrollTop() > 20) { 
+          $('.navbar').addClass('primary-color').removeClass('transparent');
+          $('#SPNGI').attr('width','35').attr('height','35');
+      } else {
+          $('.navbar').removeClass('primary-color').addClass('transparent');
+          $('#SPNGI').attr('width','50').attr('height','50');
+      }
+    });
 $(document).ready(function(){
     $('#NavClick').click(function(){
         $('html, body').animate({scrollTop:0}, 'slow');
