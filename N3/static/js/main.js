@@ -370,7 +370,7 @@ window.addEventListener('load', function(event) {
 /* Folder navigation */
 $(document).ready(function(){
     $('#Add2016').click(function(){
-        var demilsez = '<div class="flex-wrap dsui-subcontainer flex-wrap-anim">{% for img in demilsez %}<div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;"><img width="150" height="150" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img" style="pointer-events: none;"><p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p></div>{% endfor %}</div>';
+        var demilsez = '{% raw %}<div class="flex-wrap dsui-subcontainer flex-wrap-anim">{% for img in demilsez %}<div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;"><img width="150" height="150" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img" style="pointer-events: none;"><p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p></div>{% endfor %}</div>{% endraw %}';
         $('#2016Container').append(demilsez);
     })
 })
