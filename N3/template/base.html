@@ -57,11 +57,11 @@
 <!-- /.DevAlert-->
 <!--- Content --->
 <div class="dsui-container vh-100">
-<div class="flex-wrap dsui-subcontainer ">
+<div class="flex-wrap dsui-subcontainer flex-wrap-anim">
   {% for img in demilsez %}
-  <div class="dsui-img-container z-depth-1 hoverable" data-tilt>
-    <img width="250" height="250" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img">
-    <p class="dsui-hover hiddenDSH ubuntuB">{{img}}</p>
+  <div class="dsui-img-container z-depth-1" data-tilt>
+    <img width="150" height="150" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img">
+    <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
   </div>
   {% endfor %}
 </div>
