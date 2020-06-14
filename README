@@ -1,9 +1,15 @@
 
+# N3G
+This app is a  **NEP 3 Gen** app. 
 
-<h1 class="code-line" data-line-start=1 data-line-end=2 ><a id="N3G_1"></a>N3G</h1>
-<p class="has-line-data" data-line-start="2" data-line-end="3">This app is a  <strong>NEP 3 Gen</strong> app.</p>
-<h2 class="code-line" data-line-start=6 data-line-end=7 ><a id="Design_UI_6"></a>Design UI</h2>
-<p class="has-line-data" data-line-start="8" data-line-end="9"><strong>DSUI</strong> is an images / gifs / videos web-showcase, allowing to show images / gifs / videos from different folder with automatic styling and import. It was made with <strong>N3G stack</strong> and <strong><em>Flask</em></strong>.</p>
-<h2 class="code-line" data-line-start=12 data-line-end=13 ><a id="Licensing_12"></a>Licensing</h2>
-<p class="has-line-data" data-line-start="14" data-line-end="15"><strong>DSUI</strong> was made especialy to display my portfolio and it wasn’t created to be used anywhere else than my own webserver, but if you understand how it works and want to re-use <strong>DSUI</strong>, you can only if you fork without editing the templates to remove / add things. (ofc you can use your images)</p>
+ 
 
+## Design UI 
+
+**DSUI** is an images / gifs / videos web-showcase, allowing to show images / gifs / videos from different folder with automatic styling and import. It was made with **N3G stack** and ***Flask***.
+
+
+
+## Licensing
+
+**DSUI** was made especialy to display my portfolio and it wasn't created to be used anywhere else than my own webserver, but if you understand how it works and want to re-use **DSUI**, you can only if you fork without editing the templates to remove / add things. (ofc you can use your images)
