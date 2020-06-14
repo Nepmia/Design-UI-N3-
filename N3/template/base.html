@@ -46,7 +46,7 @@
 </nav>
 <!-- /.Navbar -->
 <!-- DevAlert -->
-<div class="w-100 p-3 position-fixed d-flex flex-row-reverse devalertoff h-auto" id="devalert" style="z-index: 100;">
+<div class="p-3 position-fixed d-flex flex-row-reverse devalertoff h-auto" id="devalert" style="z-index: 100;right: 0%;">
 <div class="d-flex justify-content-center rounded-lg primary-color z-depth-1" style="background-color: rgba(0,0,255,.5);z-index: 100;width: 900px;">
 <div class="align-self-center al p-3 ubuntu tw" style="text-align: center;">
   <strong class="ubuntuB">Attention!</strong> This website is still in developpement, it's design and features could change at anymoment.
@@ -59,8 +59,8 @@
 <div class="dsui-container vh-100">
 <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
   {% for img in demilsez %}
-  <div class="dsui-img-container z-depth-1" data-tilt>
-    <img width="150" height="150" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img">
+  <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
+    <img width="150" height="150" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img" style="pointer-events: none;">
     <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
   </div>
   {% endfor %}
