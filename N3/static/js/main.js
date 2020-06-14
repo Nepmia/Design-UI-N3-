@@ -27,7 +27,7 @@ window.onload = function(){
     $("#devalert").removeClass('devalertoff').addClass('devalerton');
 };
 /* /.DevAlert */
-
+/* ImgContainer hover function */
 $(document).ready(function(){
     $('.dsui-img-container').hover(function(){
     var $HT = 25;
@@ -41,8 +41,13 @@ $(document).ready(function(){
         $(this).find('p').removeClass('visibleDSH').addClass('hiddenDSH').removeClass('visibleDSHH');
     })
 })
-
-
+$('p').each( function() {
+    orgText = $(this).html();
+    newText = orgText.replace('.jpg','');
+    $(this).html(newText);
+  });
+/* /.ImgContainer hover function */
+/* Respsonsive wrapping and justify */
 $(window).resize(function(){
     var $minW = 500;
     if ( $(window).width() < $minW) {
@@ -107,4 +112,11 @@ window.addEventListener('load', function(event) {
       });
     });
   });
-  
+/* /.Respsonsive wrapping and justify */
+/* Folder navigation */
+$(document).ready(function(){
+    $('#Add2016').click(function(){
+        var demilsez = '<div class="flex-wrap dsui-subcontainer flex-wrap-anim">{% for img in demilsez %}<div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;"><img width="150" height="150" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img" style="pointer-events: none;"><p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p></div>{% endfor %}</div>';
+        $('#2016Container').append(demilsez);
+    })
+})
