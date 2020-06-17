@@ -116,3 +116,12 @@
 body{
     min-height: 100%;
 }
+
+.img-viewer-container{
+    position: fixed;
+    display: flex;
+    z-index: 500;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(44, 44, 44, 0.7);
+}

@@ -367,4 +367,9 @@ window.addEventListener('load', function(event) {
 
 
 /* /.Respsonsive wrapping and justify */
+
+/* IMG Viewer */
+
+
 /* Folder navigation */
+/* /.Folder navigation */
