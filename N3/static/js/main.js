@@ -3,20 +3,20 @@ $(document).ready(function() {
     $(window).scroll(function() {
       if($(this).scrollTop() > 20) { 
           $('.navbar').addClass('primary-color').removeClass('transparent');
-          $('#SPNGI').attr('width','35').attr('height','35');
+          $('#SPNGI').attr('width','35').attr('height','35').addClass('translated');
       } else {
           $('.navbar').removeClass('primary-color').addClass('transparent');
-          $('#SPNGI').attr('width','50').attr('height','50');
+          $('#SPNGI').attr('width','50').attr('height','50').removeClass('translated');
       }
     });
   });
   $(document).ready(function() {
       if($(this).scrollTop() > 20) { 
           $('.navbar').addClass('primary-color').removeClass('transparent');
-          $('#SPNGI').attr('width','35').attr('height','35');
+          $('#SPNGI').attr('width','35').attr('height','35').addClass('translated');
       } else {
           $('.navbar').removeClass('primary-color').addClass('transparent');
-          $('#SPNGI').attr('width','50').attr('height','50');
+          $('#SPNGI').attr('width','50').attr('height','50').removeClass('translated');
       }
     });
 $(document).ready(function(){

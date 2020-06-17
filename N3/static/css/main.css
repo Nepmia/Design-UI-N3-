@@ -125,3 +125,7 @@ body{
     left: 0%;
     background-color: rgba(44, 44, 44, 0.7);
 }
+
+.translated{
+    transform: translateX(5px);
+}
