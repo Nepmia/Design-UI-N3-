@@ -369,7 +369,11 @@ window.addEventListener('load', function(event) {
 /* /.Respsonsive wrapping and justify */
 
 /* IMG Viewer */
-
+$(document).ready(function(){
+  $('.dsui-img-container').click(function(){
+    $('#img-viewer').removeClass('hidden').removeClass('d-none').addClass('visible');
+  })
+})
 
 /* Folder navigation */
 /* /.Folder navigation */
