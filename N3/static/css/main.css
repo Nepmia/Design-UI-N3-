@@ -159,7 +159,7 @@ body{
     fill: transparent;
     stroke: #009688;
     stroke-width: 5;
-    animation: dash 1.5s ease infinite,rotate 2s linear infinite,spin-colors 5.5s ease infinite;
+    animation: dash 1.5s ease infinite,rotate 2s linear infinite,spin-colors 14s ease infinite;
 }
 
 @keyframes dash {
@@ -185,12 +185,24 @@ body{
 @keyframes spin-colors {
     0% { stroke: #ff4343;
     }
-    25% { stroke: #ffd143;
+    10% { stroke: #ffd143;
     }
-    50% { stroke: #43ff63;
+    20% { stroke: #43ff63;
     }
-    75% { stroke: #4350ff;
+    30% { stroke: #4350ff;
     }
-    100% { stroke: #fd43ff; 
+    40% { stroke: #fd43ff; 
+    }
+    50% { stroke: #ff4343;
+    }
+    60% { stroke: #ffd143;
+    }
+    70% { stroke: #43ff63;
+    }
+    80% { stroke: #4350ff;
+    }
+    90% { stroke: #fd43ff; 
+    }
+    100% { stroke: #ff4343;
     }
 } 
