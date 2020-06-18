@@ -52,17 +52,31 @@
 </div>
 <!-- /.DevAlert-->
 
-<div class="img-viewer-container container-fluid vh-100 hidden d-none" id="img-viewer">
+<div class="img-viewer-container container-fluid vh-100 hidden d-none justify-content-center" id="img-viewer">
   <div class="img-viewer-closebtn ubuntuB">x</div>
-  <div class="img-viewer-load"></div>
+
+<table class="vh-100">
+  <tbody>
+  <tr>
+    <td class="align-middle">
+  <div class="img-viewer-load">
+    <svg class="circle-loader" width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="15">
+    </svg>
+  
   <div class="img-viewer">
     <img src="" class="viewer-img" id="viewer-img">
+    </div>
   </div>
+ </td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
 <!--- Content --->
- <div class="dsui-container 2016Container ">
+ <div class="dsui-container 2016Container">
 <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
   {% for img in demilsez %}
   <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
@@ -74,6 +88,9 @@
 </div>
 
 
+{% for img in all %}
+<p class="d-none" id="{{url_for("static", filename="demilsez/" + img)}}">{{url_for("static", filename="all/" + img)}}</p>
+{% endfor %}
 <!--- <div class="dsui-container 2017Container">
   <div class="flex-wrap dsui-subcontainer flex-wrap-anim2">
     {% for img in demildiset %}

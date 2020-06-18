@@ -132,7 +132,63 @@ body{
     transition: 0.5s ease;
     opacity: 0;
 }
-
+.img-viewer-closebtn{
+    font-size: 30px;
+    position:absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    color: white;
+}
+.img-viewer-closebtn:hover{
+    color: #ff4848;
+    transition: 0.5s ease;
+}
 .translated{
     transform: translateX(5px);
 }
+
+
+.circle-loader {
+    margin-left: 48%;  
+    fill: transparent;
+    stroke: #009688;
+    stroke-width: 5;
+    animation: dash 1.5s ease infinite,rotate 2s linear infinite,spin-colors 5.5s ease infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1,95;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 85,95;
+        stroke-dashoffset: -25;
+    }
+    100% {
+        stroke-dasharray: 85,95;
+        stroke-dashoffset: -90;
+    }
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
+}
+
+@keyframes spin-colors {
+    0% { stroke: #ff4343;
+    }
+    25% { stroke: #ffd143;
+    }
+    50% { stroke: #43ff63;
+    }
+    75% { stroke: #4350ff;
+    }
+    100% { stroke: #fd43ff; 
+    }
+} 

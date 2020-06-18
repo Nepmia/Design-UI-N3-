@@ -371,7 +371,10 @@ window.addEventListener('load', function(event) {
 /* IMG Viewer */
 $(document).ready(function(){
   $('.dsui-img-container').click(function(){
-    $('#img-viewer').removeClass('hidden').removeClass('d-none').addClass('visible');
+    $('#img-viewer').removeClass('d-none');
+    setTimeout(function () {$('#img-viewer').removeClass('hidden').addClass('visible');},200);
+    $('.navbar').css('transform','translateY(-60px)');
+    $('#imgvl').attr('autoplay','');
   })
 })
 
