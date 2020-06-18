@@ -422,3 +422,96 @@ $(document).ready(function(){
   });
   
 });
+
+
+
+
+
+$(document).ready(function(){
+  var $2016 = $('.2016Container');
+  var $2017 = $('.2017Container');
+  var $2018 = $('.2018Container');
+  var $2019 = $('.2019Container');
+  var $2020 = $('.2020Container');
+  var $home1 = $('.home1');
+  var $hc = $('.ypc');
+  $('#Nav2016').click(function(){
+    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
+    setTimeout(function(){ $('#preloader').addClass('visible')},500);
+    $2016.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2017.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2018.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
+    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
+    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+  });
+  $('#Nav2017').click(function(){
+    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
+    setTimeout(function(){ $('#preloader').addClass('visible')},500);
+    $2017.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2016.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2018.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
+    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
+    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+  });
+  $('#Nav2018').click(function(){
+    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
+    setTimeout(function(){ $('#preloader').addClass('visible')},500);
+    $2018.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2016.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2017.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
+    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
+    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+  });
+  $('#Nav2019').click(function(){
+    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
+    setTimeout(function(){ $('#preloader').addClass('visible')},500);
+    $2019.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2016.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2017.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2018.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
+    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
+    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+  });
+  $('#Nav2020').click(function(){
+    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
+    setTimeout(function(){ $('#preloader').addClass('visible')},500);
+    $2020.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2016.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2017.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2018.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
+    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
+    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+  });
+  $('#NavClick').click(function(){
+    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
+    setTimeout(function(){ $('#preloader').addClass('visible')},500);
+    $home1.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $hc.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2016.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2017.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2018.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
+    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+  });
+
+});
