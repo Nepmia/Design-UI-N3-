@@ -92,282 +92,6 @@ $(window).resize(function(){
     }
 })
 
-window.addEventListener('load', function(event) {
-    var targetClassName = 'flex-wrap-anim';
-    var defaultDuration = '0.3s';
-  
-    var dummyList = [];
-    function addDummy(item, duration) {
-      var top = item.offsetTop;
-      var left = item.offsetLeft;
-      setTimeout(function() {
-        item.style.position = 'absolute';
-        item.style.top = top + 'px';
-        item.style.left = left + 'px';
-  
-        var dummyDiv = document.createElement('div');
-        dummyDiv.classList.add(targetClassName + '-dummy');
-        var rect = item.getBoundingClientRect();
-        dummyDiv.style.width = rect.width + 'px';
-        dummyDiv.style.height = rect.height + 'px';
-        dummyDiv.style.margin = '5px';
-        dummyDiv.style.visibility = 'hidden';
-        dummyDiv['__' + targetClassName + '_pair'] = item;
-        dummyDiv['__' + targetClassName + '_duration'] = duration;
-        item.parentNode.appendChild(dummyDiv);
-        dummyList.push(dummyDiv);
-      }, 0);
-    }
-  
-    var conts = document.getElementsByClassName(targetClassName);
-    for (var i = 0, max = conts.length; i < max; i++) {
-      var cont = conts[i];
-      cont.style.position = 'relative';
-      var duration = cont.getAttribute('data-duration')
-        || defaultDuration;
-      var items = cont.getElementsByTagName('div');
-      for (var i = 0, max = items.length; i < max; i++) {
-        addDummy(items[i], duration);
-      }
-    }
-  
-    window.addEventListener('resize', function(event) {
-      dummyList.forEach(function(dummyDiv) {
-        var item = dummyDiv['__' + targetClassName + '_pair'];
-        var duration = dummyDiv['__' + targetClassName + '_duration'];
-        if (item.offsetTop != dummyDiv.offsetTop) {
-          item.style.transition = 'all ' + duration;
-          item.style.top = dummyDiv.offsetTop + 'px';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        } else {
-          item.style.transition = '';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        }
-      });
-    });
-  });
-
-window.addEventListener('load', function(event) {
-    var targetClassName = 'flex-wrap-anim2';
-    var defaultDuration = '0.3s';
-  
-    var dummyList = [];
-    function addDummy(item, duration) {
-      var top = item.offsetTop;
-      var left = item.offsetLeft;
-      setTimeout(function() {
-        item.style.position = 'absolute';
-        item.style.top = top + 'px';
-        item.style.left = left + 'px';
-  
-        var dummyDiv = document.createElement('div');
-        dummyDiv.classList.add(targetClassName + '-dummy');
-        var rect = item.getBoundingClientRect();
-        dummyDiv.style.width = rect.width + 'px';
-        dummyDiv.style.height = rect.height + 'px';
-        dummyDiv.style.margin = '5px';
-        dummyDiv.style.visibility = 'hidden';
-        dummyDiv['__' + targetClassName + '_pair'] = item;
-        dummyDiv['__' + targetClassName + '_duration'] = duration;
-        item.parentNode.appendChild(dummyDiv);
-        dummyList.push(dummyDiv);
-      }, 0);
-    }
-  
-    var conts = document.getElementsByClassName(targetClassName);
-    for (var i = 0, max = conts.length; i < max; i++) {
-      var cont = conts[i];
-      cont.style.position = 'relative';
-      var duration = cont.getAttribute('data-duration')
-        || defaultDuration;
-      var items = cont.getElementsByTagName('div');
-      for (var i = 0, max = items.length; i < max; i++) {
-        addDummy(items[i], duration);
-      }
-    }
-  
-    window.addEventListener('resize', function(event) {
-      dummyList.forEach(function(dummyDiv) {
-        var item = dummyDiv['__' + targetClassName + '_pair'];
-        var duration = dummyDiv['__' + targetClassName + '_duration'];
-        if (item.offsetTop != dummyDiv.offsetTop) {
-          item.style.transition = 'all ' + duration;
-          item.style.top = dummyDiv.offsetTop + 'px';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        } else {
-          item.style.transition = '';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        }
-      });
-    });
-});
-
-window.addEventListener('load', function(event) {
-    var targetClassName = 'flex-wrap-anim3';
-    var defaultDuration = '0.3s';
-  
-    var dummyList = [];
-    function addDummy(item, duration) {
-      var top = item.offsetTop;
-      var left = item.offsetLeft;
-      setTimeout(function() {
-        item.style.position = 'absolute';
-        item.style.top = top + 'px';
-        item.style.left = left + 'px';
-  
-        var dummyDiv = document.createElement('div');
-        dummyDiv.classList.add(targetClassName + '-dummy');
-        var rect = item.getBoundingClientRect();
-        dummyDiv.style.width = rect.width + 'px';
-        dummyDiv.style.height = rect.height + 'px';
-        dummyDiv.style.margin = '5px';
-        dummyDiv.style.visibility = 'hidden';
-        dummyDiv['__' + targetClassName + '_pair'] = item;
-        dummyDiv['__' + targetClassName + '_duration'] = duration;
-        item.parentNode.appendChild(dummyDiv);
-        dummyList.push(dummyDiv);
-      }, 0);
-    }
-  
-    var conts = document.getElementsByClassName(targetClassName);
-    for (var i = 0, max = conts.length; i < max; i++) {
-      var cont = conts[i];
-      cont.style.position = 'relative';
-      var duration = cont.getAttribute('data-duration')
-        || defaultDuration;
-      var items = cont.getElementsByTagName('div');
-      for (var i = 0, max = items.length; i < max; i++) {
-        addDummy(items[i], duration);
-      }
-    }
-  
-    window.addEventListener('resize', function(event) {
-      dummyList.forEach(function(dummyDiv) {
-        var item = dummyDiv['__' + targetClassName + '_pair'];
-        var duration = dummyDiv['__' + targetClassName + '_duration'];
-        if (item.offsetTop != dummyDiv.offsetTop) {
-          item.style.transition = 'all ' + duration;
-          item.style.top = dummyDiv.offsetTop + 'px';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        } else {
-          item.style.transition = '';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        }
-      });
-    });
-});
-
-window.addEventListener('load', function(event) {
-    var targetClassName = 'flex-wrap-anim4';
-    var defaultDuration = '0.3s';
-  
-    var dummyList = [];
-    function addDummy(item, duration) {
-      var top = item.offsetTop;
-      var left = item.offsetLeft;
-      setTimeout(function() {
-        item.style.position = 'absolute';
-        item.style.top = top + 'px';
-        item.style.left = left + 'px';
-  
-        var dummyDiv = document.createElement('div');
-        dummyDiv.classList.add(targetClassName + '-dummy');
-        var rect = item.getBoundingClientRect();
-        dummyDiv.style.width = rect.width + 'px';
-        dummyDiv.style.height = rect.height + 'px';
-        dummyDiv.style.margin = '5px';
-        dummyDiv.style.visibility = 'hidden';
-        dummyDiv['__' + targetClassName + '_pair'] = item;
-        dummyDiv['__' + targetClassName + '_duration'] = duration;
-        item.parentNode.appendChild(dummyDiv);
-        dummyList.push(dummyDiv);
-      }, 0);
-    }
-  
-    var conts = document.getElementsByClassName(targetClassName);
-    for (var i = 0, max = conts.length; i < max; i++) {
-      var cont = conts[i];
-      cont.style.position = 'relative';
-      var duration = cont.getAttribute('data-duration')
-        || defaultDuration;
-      var items = cont.getElementsByTagName('div');
-      for (var i = 0, max = items.length; i < max; i++) {
-        addDummy(items[i], duration);
-      }
-    }
-  
-    window.addEventListener('resize', function(event) {
-      dummyList.forEach(function(dummyDiv) {
-        var item = dummyDiv['__' + targetClassName + '_pair'];
-        var duration = dummyDiv['__' + targetClassName + '_duration'];
-        if (item.offsetTop != dummyDiv.offsetTop) {
-          item.style.transition = 'all ' + duration;
-          item.style.top = dummyDiv.offsetTop + 'px';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        } else {
-          item.style.transition = '';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        }
-      });
-    });
-});
-
-window.addEventListener('load', function(event) {
-    var targetClassName = 'flex-wrap-anim5';
-    var defaultDuration = '0.3s';
-  
-    var dummyList = [];
-    function addDummy(item, duration) {
-      var top = item.offsetTop;
-      var left = item.offsetLeft;
-      setTimeout(function() {
-        item.style.position = 'absolute';
-        item.style.top = top + 'px';
-        item.style.left = left + 'px';
-  
-        var dummyDiv = document.createElement('div');
-        dummyDiv.classList.add(targetClassName + '-dummy');
-        var rect = item.getBoundingClientRect();
-        dummyDiv.style.width = rect.width + 'px';
-        dummyDiv.style.height = rect.height + 'px';
-        dummyDiv.style.margin = '5px';
-        dummyDiv.style.visibility = 'hidden';
-        dummyDiv['__' + targetClassName + '_pair'] = item;
-        dummyDiv['__' + targetClassName + '_duration'] = duration;
-        item.parentNode.appendChild(dummyDiv);
-        dummyList.push(dummyDiv);
-      }, 0);
-    }
-  
-    var conts = document.getElementsByClassName(targetClassName);
-    for (var i = 0, max = conts.length; i < max; i++) {
-      var cont = conts[i];
-      cont.style.position = 'relative';
-      var duration = cont.getAttribute('data-duration')
-        || defaultDuration;
-      var items = cont.getElementsByTagName('div');
-      for (var i = 0, max = items.length; i < max; i++) {
-        addDummy(items[i], duration);
-      }
-    }
-  
-    window.addEventListener('resize', function(event) {
-      dummyList.forEach(function(dummyDiv) {
-        var item = dummyDiv['__' + targetClassName + '_pair'];
-        var duration = dummyDiv['__' + targetClassName + '_duration'];
-        if (item.offsetTop != dummyDiv.offsetTop) {
-          item.style.transition = 'all ' + duration;
-          item.style.top = dummyDiv.offsetTop + 'px';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        } else {
-          item.style.transition = '';
-          item.style.left = dummyDiv.offsetLeft + 'px';
-        }
-      });
-    });
-});
-
-
 /* /.Respsonsive wrapping and justify */
 
 /* IMG Viewer */
@@ -436,82 +160,82 @@ $(document).ready(function(){
   var $home1 = $('.home1');
   var $hc = $('.ypc');
   $('#Nav2016').click(function(){
-    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
-    setTimeout(function(){ $('#preloader').addClass('visible')},500);
-    $2016.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2016.addClass('visible').removeClass('hidden').removeClass('d-none');
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
     $2020.addClass('d-none').addClass('hidden').removeClass('visible');
-    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
-    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
-    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
   });
   $('#Nav2017').click(function(){
-    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
-    setTimeout(function(){ $('#preloader').addClass('visible')},500);
-    $2017.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2017.addClass('visible').removeClass('hidden').removeClass('d-none');
     $2016.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
     $2020.addClass('d-none').addClass('hidden').removeClass('visible');
-    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
-    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
-    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
   });
   $('#Nav2018').click(function(){
-    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
-    setTimeout(function(){ $('#preloader').addClass('visible')},500);
-    $2018.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2018.addClass('visible').removeClass('hidden').removeClass('d-none');
     $2016.addClass('d-none').addClass('hidden').removeClass('visible');
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
     $2020.addClass('d-none').addClass('hidden').removeClass('visible');
-    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
-    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
-    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
   });
   $('#Nav2019').click(function(){
-    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
-    setTimeout(function(){ $('#preloader').addClass('visible')},500);
-    $2019.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2019.addClass('visible').removeClass('hidden').removeClass('d-none');
     $2016.addClass('d-none').addClass('hidden').removeClass('visible');
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2020.addClass('d-none').addClass('hidden').removeClass('visible');
-    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
-    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
-    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
   });
   $('#Nav2020').click(function(){
-    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
-    setTimeout(function(){ $('#preloader').addClass('visible')},500);
-    $2020.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2020.addClass('visible').removeClass('hidden').removeClass('d-none');
     $2016.addClass('d-none').addClass('hidden').removeClass('visible');
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
-    $home1.addClass('d-none').addClass('hidden').removeClass('visible');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible');
-    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
-    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
   });
   $('#NavClick').click(function(){
-    setTimeout(function(){ $('#preloader').addClass('d-flex').removeClass('d-none'); }, 200);
-    setTimeout(function(){ $('#preloader').addClass('visible')},500);
-    $home1.addClass('visible').removeClass('hidden').removeClass('d-none');
-    $hc.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $home1.addClass('visible').removeClass('hidden').removeClass('d-none').addClass('d-flex');
+    $hc.addClass('visible').removeClass('hidden').removeClass('d-none').addClass('d-flex');
     $2016.addClass('d-none').addClass('hidden').removeClass('visible');
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
-    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
-    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 1000);
-    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},1500);
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible'); },500);
   });
 
 });
