@@ -34,6 +34,9 @@ $(document).ready(function() {
 });
 window.onload = function(){
     $("#devalert").removeClass('devalertoff').addClass('devalerton');
+    $('.navbar').css('transform','translateY(0px)');
+    setTimeout(function(){ $('#preloader').addClass('hidden'); }, 200);
+    setTimeout(function(){ $('#preloader').addClass('d-none').removeClass('d-flex')},500);
 };
 /* /.DevAlert */
 /* ImgContainer hover function */
