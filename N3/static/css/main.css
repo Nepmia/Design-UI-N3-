@@ -132,7 +132,7 @@ body{
     left: 0%;
     background-color: rgba(44, 44, 44, 0.7);
     transition: 0.5s ease;
-    opacity: 0;
+    opacity: 1;
 }
 .img-viewer-closebtn{
     font-size: 30px;
@@ -206,3 +206,46 @@ body{
     100% { stroke: #ff4343;
     }
 } 
+
+.s1{
+    opacity: 0;
+    transform: scale(0.7);
+    transition: 0.2s ease;
+}
+
+.s2{
+    opacity: 1;
+    transform: scale(0.8);
+    transition: 0.2s ease;
+}
+
+.year-picker-title{
+    text-align: center;
+    color:white;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 100%);
+}
+.year-picker-subtitle{
+    color:white;
+    text-align: center;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 100%);
+}
+.year-picker-container{
+    width: 250px;
+    height: 40%;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.year-picker-img{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.ypc{
+    justify-content: center;
+    margin-top: 5%;
+}

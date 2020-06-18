@@ -36,7 +36,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark transparent fixed-top py-md-0 py-0" style="transform: translateY(-60px);">
   <!-- Brand -->
-  <a class="navbar-brand" id="SPNG" href="#"><div data-tilt><img id="SPNGI" width="50" height="50" src="img/svg/SPNG.svg"/></div></a>
+  <a class="navbar-brand" id="SPNG" href="https://nepmia.fr"><div data-tilt><img id="SPNGI" width="50" height="50" src="img/svg/SPNG.svg"/></div></a>
   <!-- Collapse button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#MainNav" aria-controls="MainNav"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -47,9 +47,29 @@
       <!-- Links -->
       <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-              <a id="NavClick" class="nav-link rounded-lg ubuntuB">Design UI
+              <a id="Nav2016" class="nav-link rounded-lg ubuntuB">2016
               </a>
           </li>
+          <li class="nav-item">
+            <a id="Nav2017" class="nav-link rounded-lg ubuntuB">2017
+            </a>
+        </li>
+        <li class="nav-item">
+          <a id="Nav2018" class="nav-link rounded-lg ubuntuB">2018
+          </a>
+      </li>
+      <li class="nav-item">
+        <a id="Nav2019" class="nav-link rounded-lg ubuntuB">2019
+        </a>
+    </li>
+    <li class="nav-item">
+      <a id="Nav2020" class="nav-link rounded-lg ubuntuB">2020
+      </a>
+  </li>
+  <li class="nav-item">
+    <a id="NavClick" class="nav-link rounded-lg ubuntuB">Design UI
+    </a>
+</li>
       </ul>
       </div>
     
@@ -68,92 +88,126 @@
 </div>
 <!-- /.DevAlert-->
 
-<div class="img-viewer-container container-fluid vh-100 hidden d-none justify-content-center" id="img-viewer">
-  <div class="img-viewer-closebtn ubuntuB">x</div>
-
-<table class="vh-100">
-  <tbody>
-  <tr>
-    <td class="align-middle">
-  <div class="img-viewer-load">
-    <svg class="circle-loader" width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="20" cy="20" r="15">
-    </svg>
-  
-  <div class="img-viewer">
-    <img src="" class="viewer-img" id="viewer-img">
+<div class="img-viewer-container container-fluid h-100 d-none hidden justify-content-center" id="img-viewer">
+  <div id="dsuioff"class="img-viewer-closebtn ubuntuB">x</div>
+  <div class="img-viewer-sub d-flex justify-content-center align-self-center " style="width: 80%;height: 70%;">
+    <img src="" class="viewer-img s1 img-fluid align-self-center" id="viewer-img" style="width: 60% !important;">
     </div>
-  </div>
- </td>
-</tr>
-</tbody>
-</table>
 </div>
 
 
 <!--- Content --->
- <div class="dsui-container 2016Container">
+<div class="container-fluid d-flex justify-content-center flex-column " >
+ <div class="ubuntuB text-center tw" style="font-size: 70px;margin-top: 60px;">- DSUI -</div>
+ <div class="ubuntuLi text-center tw" style="font-size: 20px;">Pick a year</div>
+</div>
+
+<div class="container-fluid d-flex ypc flex-wrap" style="height: 75%;">
+  <div class="year-picker-container z-depth-1">
+    <div class="year-picker-img" id="yp2016" style="background-image:url('{{url_for("static", filename="img/Discovery.png")}}');"></div>
+    <div class="ypt z-depth-1"><div class="year-picker-title ubuntuB">2016</div>
+    <div class="year-picker-subtitle ubuntuLi">Discovery-Gen</div></div>
+  </div>
+
+  <div class="year-picker-container z-depth-1">
+    <div class="year-picker-img" id="yp2017" style="background-image:url('{{url_for("static", filename="img/Energyq.png")}}');"></div>
+    <div class="ypt z-depth-1"><div class="year-picker-title ubuntuB">2017</div>
+    <div class="year-picker-subtitle ubuntuLi">Emptyness-Gen</div></div>
+  </div>
+
+  <div class="year-picker-container z-depth-1">
+    <div class="year-picker-img" id="yp2018" style="background-image:url('{{url_for("static", filename="img/Evolution.png")}}');"></div>
+    <div class="ypt z-depth-1"><div class="year-picker-title ubuntuB">2018</div>
+    <div class="year-picker-subtitle ubuntuLi">N1 Gen, Evolution</div></div>
+  </div>
+
+  <div class="year-picker-container z-depth-1">
+    <div class="year-picker-img" id="yp2019" style="background-image:url('{{url_for("static", filename="img/SuperSonic.png")}}');"></div>
+    <div class="ypt z-depth-1"><div class="year-picker-title ubuntuB">2019</div>
+    <div class="year-picker-subtitle ubuntuLi">N2 Gen, SuperSonic</div></div>
+  </div>
+
+  <div class="year-picker-container z-depth-1">
+    <div class="year-picker-img" id="yp2020" style="background-image:url('{{url_for("static", filename="img/Ionized.png")}}');"></div>
+    <div class="ypt z-depth-1"><div class="year-picker-title ubuntuB">2020</div>
+    <div class="year-picker-subtitle ubuntuLi">N3 Gen, Ionized</div></div>
+  </div>
+
+
+</div>
+
+
+
+
+ <div class="dsui-container 2016Container hidden d-none">
 <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
   {% for img in demilsez %}
   <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
-    <img width="150" height="150" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img" style="pointer-events: none;" id="dsui{{loop.index}}">
-    <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
+    <img width="150" height="150" src="{{url_for("static", filename="demilsez/" + img)}}" class="dsui-img" style="pointer-events: none;" id="{{img | replace(".jpg", "")}}">
+    <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img | replace(".jpg", "") | replace("_", " ")}}</p>
   </div>
   {% endfor %}
 </div>
 </div>
 
-
-{% for img in all %}
-<p class="d-none" id="{{url_for("static", filename="demilsez/" + img)}}">{{url_for("static", filename="all/" + img)}}</p>
-{% endfor %}
-<!--- <div class="dsui-container 2017Container">
-  <div class="flex-wrap dsui-subcontainer flex-wrap-anim2">
+<div class="dsui-container 2017Container hidden d-none">
+  <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
     {% for img in demildiset %}
     <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
-      <img width="150" height="150" src="{{url_for("static", filename="demildiset/" + img)}}" class="dsui-img" style="pointer-events: none;">
-      <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
+      <img width="150" height="150" src="{{url_for("static", filename="demildiset/" + img)}}" class="dsui-img" style="pointer-events: none;" id="{{img | replace(".jpg", "")}}">
+      <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img | replace(".jpg", "") | replace("_", " ")}}</p>
     </div>
     {% endfor %}
 </div>
 </div>
 
-<div class="dsui-container 2018Container">
-  <div class="flex-wrap dsui-subcontainer flex-wrap-anim3">
+
+<div class="dsui-container 2018Container hidden d-none">
+  <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
     {% for img in demildihouit %}
     <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
-      <img width="150" height="150" src="{{url_for("static", filename="demildihouit/" + img)}}" class="dsui-img" style="pointer-events: none;">
-      <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
+      <img width="150" height="150" src="{{url_for("static", filename="demildihouit/" + img)}}" class="dsui-img" style="pointer-events: none;" id="{{img | replace(".jpg", "")}}">
+      <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img | replace(".jpg", "") | replace("_", " ")}}</p>
     </div>
     {% endfor %}
 </div>
 </div>
 
-<div class="dsui-container 2019Container">
-  <div class="flex-wrap dsui-subcontainer flex-wrap-anim4">
-      {% for img in demildineuf %}
-      <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
-        <img width="150" height="150" src="{{url_for("static", filename="demildineuf/" + img)}}" class="dsui-img" style="pointer-events: none;">
-        <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
-      </div>
-      {% endfor %}
+
+
+<div class="dsui-container 2019Container hidden d-none">
+  <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
+    {% for img in demildineuf %}
+    <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
+      <img width="150" height="150" src="{{url_for("static", filename="demildineuf/" + img)}}" class="dsui-img" style="pointer-events: none;" id="{{img | replace(".jpg", "")}}">
+      <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img | replace(".jpg", "") | replace("_", " ")}}</p>
+    </div>
+    {% endfor %}
 </div>
 </div>
 
-<div class="dsui-container 2020Container">
-  <div class="flex-wrap dsui-subcontainer flex-wrap-anim5">
-      {% for img in demilvin %}
-      <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
-        <img width="150" height="150" src="{{url_for("static", filename="demilvin/" + img)}}" class="dsui-img" style="pointer-events: none;">
-        <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img}}</p>
-      </div>
-      {% endfor %}
+
+
+<div class="dsui-container 2020Container hidden d-none">
+  <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
+    {% for img in demilvin %}
+    <div class="dsui-img-container z-depth-1" data-tilt style="cursor: pointer;">
+      <img width="150" height="150" src="{{url_for("static", filename="demilvin/" + img)}}" class="dsui-img" style="pointer-events: none;" id="{{img | replace(".jpg", "")}}">
+      <p class="dsui-hover hiddenDSH ubuntuB z-depth-1" style="pointer-events: none;">{{img | replace(".jpg", "") | replace("_", " ")}}</p>
+    </div>
+    {% endfor %}
 </div>
-</div> --->
+</div>
+
+<div class="index">
+{% for img in all %}
+<div class="viewerindex d-none" id="{{img | replace(".jpg", "") | replace(".png", "") | replace(".gif", "") | replace(".mp4", "")}}_V" src="{{url_for("static", filename="all/" + img)}}"></div>
+{% endfor %}
+</div>
 
 <!--- /.Content --->
 <footer class="footer d-flex flex-wrap justify-content-center">
-  <div class="copyright ubuntuB  p-2 text-center">© NEPMIA 2020
+  <div class="copyright ubuntuB  p-2 text-center">© NEPMIA 2020 - POWERED BY N3G
   <div class="ubuntuL p-2 text-center">All images present on this page are owned by their respective owners,you are not authorized to use any images present on this page. For more informations please contact me.</div>
 </div></footer>
 <!-- End -->
