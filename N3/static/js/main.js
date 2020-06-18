@@ -67,7 +67,7 @@ $(window).resize(function(){
     }
     else if ( $(window).width() > $minW) {
         $('.dsui-subcontainer').css('justify-content','left');
-    }
+    } 
 })
 $(document).ready(function(){
     var $minW = 500;
