@@ -239,3 +239,68 @@ $(document).ready(function(){
   });
 
 });
+
+
+
+$(document).ready(function(){
+  var $2016 = $('#yp2016');
+  var $2017 = $('#yp2017');
+  var $2018 = $('#yp2018');
+  var $2019 = $('#yp2019');
+  var $2020 = $('#yp2020');
+  $('#Nav2016').click(function(){
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2016.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2017.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2018.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');},500);
+  });
+  $('#Nav2017').click(function(){
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2017.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2016.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2018.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');},500);
+  });
+  $('#Nav2018').click(function(){
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2018.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2016.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2017.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible'); },500);
+  });
+  $('#Nav2019').click(function(){
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2019.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2016.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2017.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2018.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible'); },500);
+  });
+  $('#Nav2020').click(function(){
+    $('#fader').removeClass('hidden').addClass('visible');
+    setTimeout(function(){
+      $('#fader').removeClass('visible').addClass('hidden');
+    },1500);
+    setTimeout(function(){ $2020.addClass('visible').removeClass('hidden').removeClass('d-none');
+    $2016.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2017.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2018.addClass('d-none').addClass('hidden').removeClass('visible');
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');},500);
+  });
+});
