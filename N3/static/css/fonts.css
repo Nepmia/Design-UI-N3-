@@ -95,5 +95,5 @@
     transition: 0.5s ease;
 }
 .tw{
-    color: white;
+    color: white !important;
 }

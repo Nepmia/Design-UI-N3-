@@ -221,13 +221,8 @@ body{
 
 .year-picker-title{
     text-align: center;
-    color:white;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 100%);
-}
-.year-picker-subtitle{
-    color:white;
-    text-align: center;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.2) 100%);
+    color:black;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.2) 100%);
 }
 .year-picker-container{
     width: 250px;
@@ -248,4 +243,81 @@ body{
 .ypc{
     justify-content: center;
     margin-top: 5%;
+}
+
+
+
+.sidenavL{
+    left: -200px !important;
+    top: 0%;
+    transition: 0.5s cubic-bezier(.77,.07,.71,.94);
+    z-index: 800;
+}
+.sidenavR{
+    left:0px !important;
+    top: 0%;
+    transition: 0.5s cubic-bezier(.77,.07,.71,.94);
+    z-index: 800;
+}
+.SideNav-container{
+    background-color: rgba(75, 75, 75, 0.295);
+}
+
+#bgd{
+    background-color: rgba(44, 44, 44, 0.7);
+    transition: 0.5s cubic-bezier(.77,.07,.71,.94);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 700;
+}
+.bgdv{
+    transition: 0.5s cubic-bezier(.77,.07,.71,.94);
+    opacity: 1;
+}
+.bgdh{
+    transition: 0.5s cubic-bezier(.77,.07,.71,.94);
+    opacity: 0;
+}
+
+.uhere{
+    background-color: rgba(255,255,255,0.7);
+    pointer-events: none;
+    color: #3f3f3f !important;
+}
+
+.copyright:hover{
+    color:white;
+    cursor: default;
+}
+
+.hoverSN:hover{
+    color: #3f3f3f !important;
+    transition: 0.5s ease;
+}
+.hoverSN{
+    color: white !important;
+    transition: 0.5s ease;
+}
+
+#SideOff{
+    color: white;
+    transition: 0.5s ease;
+}
+#SideOff:hover{
+    color: #ff4343;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.trsY{
+    transform: translateY(0px);
+    transition: 0.2s ease;
+    opacity: 0;
+}
+
+.trsYn{
+    transform: translateY(-45px);
+    transition: 0.2s ease;
+    opacity: 1;
 }

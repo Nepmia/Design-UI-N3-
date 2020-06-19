@@ -3,20 +3,16 @@ $(document).ready(function() {
     $(window).scroll(function() {
       if($(this).scrollTop() > 20) { 
           $('.navbar').addClass('primary-color').removeClass('transparent');
-          $('#SPNGI').attr('width','35').attr('height','35').addClass('translated');
       } else {
           $('.navbar').removeClass('primary-color').addClass('transparent');
-          $('#SPNGI').attr('width','50').attr('height','50').removeClass('translated');
       }
     });
   });
   $(document).ready(function() {
       if($(this).scrollTop() > 20) { 
           $('.navbar').addClass('primary-color').removeClass('transparent');
-          $('#SPNGI').attr('width','35').attr('height','35').addClass('translated');
       } else {
           $('.navbar').removeClass('primary-color').addClass('transparent');
-          $('#SPNGI').attr('width','50').attr('height','50').removeClass('translated');
       }
     });
 $(document).ready(function(){
@@ -137,11 +133,9 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.year-picker-img').hover(function(){
-      $(this).parent().css('transform','translateY(-20px)');
       $(this).parent().removeClass('z-depth-1').addClass('z-depth-5');
       
   },function(){
-    $(this).parent().css('transform','translateY(0px)');
     $(this).parent().addClass('z-depth-1').removeClass('z-depth-5');
   });
   
@@ -157,9 +151,17 @@ $(document).ready(function(){
   var $2018 = $('.2018Container');
   var $2019 = $('.2019Container');
   var $2020 = $('.2020Container');
+  var $n2016 = $('#Nav2016');
+  var $n2017 = $('#Nav2017');
+  var $n2018 = $('#Nav2018');
+  var $n2019 = $('#Nav2019');
+  var $n2020 = $('#Nav2020');
+  var $nhome = $('#NavClick');
   var $home1 = $('.home1');
   var $hc = $('.ypc');
+  var $b = $('#body');
   $('#Nav2016').click(function(){
+    
     $('#fader').removeClass('hidden').addClass('visible');
     setTimeout(function(){
       $('#fader').removeClass('visible').addClass('hidden');
@@ -169,8 +171,18 @@ $(document).ready(function(){
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
     $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2016.removeClass('hoverSN').addClass('uhere');
+    $n2017.addClass('hoverSN').removeClass('uhere');
+    $n2018.addClass('hoverSN').removeClass('uhere');
+    $n2019.addClass('hoverSN').removeClass('uhere');
+    $n2020.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
     $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
   $('#Nav2017').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
@@ -182,8 +194,18 @@ $(document).ready(function(){
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
     $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2017.removeClass('hoverSN').addClass('uhere');
+    $n2016.addClass('hoverSN').removeClass('uhere');
+    $n2018.addClass('hoverSN').removeClass('uhere');
+    $n2019.addClass('hoverSN').removeClass('uhere');
+    $n2020.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
     $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
   $('#Nav2018').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
@@ -195,8 +217,18 @@ $(document).ready(function(){
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
     $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2018.removeClass('hoverSN').addClass('uhere');
+    $n2016.addClass('hoverSN').removeClass('uhere');
+    $n2017.addClass('hoverSN').removeClass('uhere');
+    $n2019.addClass('hoverSN').removeClass('uhere');
+    $n2020.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
     $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
   $('#Nav2019').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
@@ -208,8 +240,18 @@ $(document).ready(function(){
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2019.removeClass('hoverSN').addClass('uhere');
+    $n2016.addClass('hoverSN').removeClass('uhere');
+    $n2017.addClass('hoverSN').removeClass('uhere');
+    $n2018.addClass('hoverSN').removeClass('uhere');
+    $n2020.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
     $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
   $('#Nav2020').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
@@ -221,8 +263,18 @@ $(document).ready(function(){
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2020.removeClass('hoverSN').addClass('uhere');
+    $n2016.addClass('hoverSN').removeClass('uhere');
+    $n2017.addClass('hoverSN').removeClass('uhere');
+    $n2018.addClass('hoverSN').removeClass('uhere');
+    $n2019.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
     $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
-    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); },500);
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
   $('#NavClick').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
@@ -235,7 +287,17 @@ $(document).ready(function(){
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
-    $2020.addClass('d-none').addClass('hidden').removeClass('visible'); },500);
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $nhome.removeClass('hoverSN').addClass('uhere');
+    $n2016.addClass('hoverSN').removeClass('uhere');
+    $n2017.addClass('hoverSN').removeClass('uhere');
+    $n2018.addClass('hoverSN').removeClass('uhere');
+    $n2019.addClass('hoverSN').removeClass('uhere');
+    $n2020.addClass('hoverSN').removeClass('uhere'); 
+    $b.css('background-image',"url('img/DSUIHBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
 
 });
@@ -243,12 +305,22 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-  var $2016 = $('#yp2016');
-  var $2017 = $('#yp2017');
-  var $2018 = $('#yp2018');
-  var $2019 = $('#yp2019');
-  var $2020 = $('#yp2020');
-  $('#Nav2016').click(function(){
+  var $2016 = $('.2016Container');
+  var $2017 = $('.2017Container');
+  var $2018 = $('.2018Container');
+  var $2019 = $('.2019Container');
+  var $2020 = $('.2020Container');
+  var $home1 = $('.home1');
+  var $n2016 = $('#Nav2016');
+  var $n2017 = $('#Nav2017');
+  var $n2018 = $('#Nav2018');
+  var $n2019 = $('#Nav2019');
+  var $n2020 = $('#Nav2020');
+  var $nhome = $('#NavClick');
+  var $home1 = $('.home1');
+  var $hc = $('.ypc');
+  var $b = $('#body');
+  $('#yp2016').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
     setTimeout(function(){
       $('#fader').removeClass('visible').addClass('hidden');
@@ -257,9 +329,21 @@ $(document).ready(function(){
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
-    $2020.addClass('d-none').addClass('hidden').removeClass('visible');},500);
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2016.removeClass('hoverSN').addClass('uhere');
+    $n2017.addClass('hoverSN').removeClass('uhere');
+    $n2018.addClass('hoverSN').removeClass('uhere');
+    $n2019.addClass('hoverSN').removeClass('uhere');
+    $n2020.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
-  $('#Nav2017').click(function(){
+  $('#yp2017').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
     setTimeout(function(){
       $('#fader').removeClass('visible').addClass('hidden');
@@ -268,9 +352,21 @@ $(document).ready(function(){
     $2016.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
-    $2020.addClass('d-none').addClass('hidden').removeClass('visible');},500);
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2017.removeClass('hoverSN').addClass('uhere');
+    $n2016.addClass('hoverSN').removeClass('uhere');
+    $n2018.addClass('hoverSN').removeClass('uhere');
+    $n2019.addClass('hoverSN').removeClass('uhere');
+    $n2020.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
-  $('#Nav2018').click(function(){
+  $('#yp2018').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
     setTimeout(function(){
       $('#fader').removeClass('visible').addClass('hidden');
@@ -279,9 +375,21 @@ $(document).ready(function(){
     $2016.addClass('d-none').addClass('hidden').removeClass('visible');
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2019.addClass('d-none').addClass('hidden').removeClass('visible');
-    $2020.addClass('d-none').addClass('hidden').removeClass('visible'); },500);
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2018.removeClass('hoverSN').addClass('uhere');
+    $n2016.addClass('hoverSN').removeClass('uhere');
+    $n2017.addClass('hoverSN').removeClass('uhere');
+    $n2019.addClass('hoverSN').removeClass('uhere');
+    $n2020.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
-  $('#Nav2019').click(function(){
+  $('#yp2019').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
     setTimeout(function(){
       $('#fader').removeClass('visible').addClass('hidden');
@@ -290,9 +398,21 @@ $(document).ready(function(){
     $2016.addClass('d-none').addClass('hidden').removeClass('visible');
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
-    $2020.addClass('d-none').addClass('hidden').removeClass('visible'); },500);
+    $2020.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2019.removeClass('hoverSN').addClass('uhere');
+    $n2016.addClass('hoverSN').removeClass('uhere');
+    $n2017.addClass('hoverSN').removeClass('uhere');
+    $n2018.addClass('hoverSN').removeClass('uhere');
+    $n2020.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
-  $('#Nav2020').click(function(){
+  $('#yp2020').click(function(){
     $('#fader').removeClass('hidden').addClass('visible');
     setTimeout(function(){
       $('#fader').removeClass('visible').addClass('hidden');
@@ -301,6 +421,57 @@ $(document).ready(function(){
     $2016.addClass('d-none').addClass('hidden').removeClass('visible');
     $2017.addClass('d-none').addClass('hidden').removeClass('visible');
     $2018.addClass('d-none').addClass('hidden').removeClass('visible');
-    $2019.addClass('d-none').addClass('hidden').removeClass('visible');},500);
+    $2019.addClass('d-none').addClass('hidden').removeClass('visible');
+    $n2020.removeClass('hoverSN').addClass('uhere');
+    $n2016.addClass('hoverSN').removeClass('uhere');
+    $n2017.addClass('hoverSN').removeClass('uhere');
+    $n2018.addClass('hoverSN').removeClass('uhere');
+    $n2019.addClass('hoverSN').removeClass('uhere');
+    $nhome.addClass('hoverSN').removeClass('uhere');
+    $home1.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex');
+    $hc.addClass('d-none').addClass('hidden').removeClass('visible').removeClass('d-flex'); 
+    $b.css('background-image',"url('img/DSUIBG.jpg')");
+    $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+    $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+    $('.navbar').css('transform','translateY(0px)');},500);
   });
 });
+
+
+$(document).ready(function(){
+  $('#NavM').click(function(){
+    var $t = $('#SideNav')
+    if ($t.hasClass('sidenavL')){
+        $t.removeClass('sidenavL').addClass('sidenavR');
+        $('#bgd').css('pointer-events','').removeClass('bgdh').addClass('bgdv');
+        $('.navbar').css('transform','translateY(-60px)');
+    } else if ($t.hasClass('sidenavR')){
+      $t.addClass('sidenavL').removeClass('sidenavR');
+      $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+      $('.navbar').css('transform','translateY(0px)');
+    }
+  })
+  $('#bgd').click(function(){
+    if ($('#SideNav').hasClass('sidenavR')){
+      $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+      $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+      $('.navbar').css('transform','translateY(0px)');
+    }
+  })
+  $('#SideOff').click(function(){
+    if ($('#SideNav').hasClass('sidenavR')){
+      $('#SideNav').addClass('sidenavL').removeClass('sidenavR');
+      $('#bgd').css('pointer-events','none').removeClass('bgdv').addClass('bgdh');
+      $('.navbar').css('transform','translateY(0px)');
+    }
+  })
+})
+
+
+$(document).ready(function(){
+  $('.year-picker-container').hover(function(){
+    $(this).find('.ypt').removeClass('trsY').addClass('trsYn');
+  }, function(){
+    $(this).find('.ypt').removeClass('trsYn').addClass('trsY');
+  })
+})
