@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="DSUI - N3 Gen Portolio / Gallery application designed to display NEPMIA's portfolio.">
-  <meta name="theme-color" content="3b91bc">
-  <meta property="og:description" content="DSUI - N3 Gen Portolio / Gallery application designed to display NEPMIA's portfolio.">
+  <meta name="description" content="DSUI - N3 Gen Portolio application designed to display NEPMIA's portfolio.">
+  <meta name="theme-color" content="#3b91bc">
+  <meta property="og:description" content="DSUI - N3 Gen Portolio application designed to display NEPMIA's portfolio.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Design UI - N3">
-  <meta property="og:image" content="img/SPNGICO.png">
+  <meta property="og:image" content="{{url_for("static", filename="img/SPNGICOS.png")}}">
   <title>DSUI - Design UI</title>
   <!-- icon -->
   <link rel="icon" href="img/SPNGICO.png" type="image/png">
@@ -20,16 +20,16 @@
   <link rel="stylesheet" href="css/mdb.min.css">
   <!-- Main css rules -->
   <link rel="stylesheet" href="css/main.css">
-  <!-- self-hosted fonts -->
+  <!-- Fonts -->
   <link rel="stylesheet" href="css/fonts.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
 </head>
 <body class="nepmia-gray" style="background-image:url('img/DSUIHBG.jpg');background-size:cover;background-repeat: no-repeat;" id="body">
 
-<!-- loader -->
+<!-- page loader -->
 <div class="position-fixed fader vh-100 vw-100 nepmia-gray d-flex justify-content-center hidden" style="z-index: 1000;pointer-events: none;cursor:wait;" id="fader">
-<div class="ubuntuB tw align-self-center" style="font-size: 70px;text-align: center;cursor:wait;">DSUI</div>
+<div class="ubuntuB tw align-self-center" id="DSUIPOP" style="font-size: 70px;text-align: center;cursor:wait;">DSUI</div>
 </div>
-<!-- /.loader -->
 
 <!-- Preloader -->
 <div class="position-fixed vh-100 vw-100 d-flex justify-content-center nepmia-gray" style="z-index: 1000;" id="preloader">
@@ -47,103 +47,91 @@
       </tbody>
    </table>
 </div>
-<!-- /.Preloader -->
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark transparent fixed-top py-md-0 py-0" style="transform: translateY(-60px);">
-  <!-- Brand -->
   <svg data-tilt class="navbar-brand" height="50px" id="NavM" style="enable-background:new 0 0 32 32;fill:white;cursor:pointer;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
-  <!-- Collapsible content -->
-      <!-- Links -->
       <ul class="navbar-nav ml-auto">
-          
-<!--<li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle ubuntuB rounded-lg tw" id="navbarDropdownMenuLink" data-toggle="dropdown"
-    aria-haspopup="true" aria-expanded="false">QUICK NAV</a>
-  <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-    <a class="dropdown-item" id="Nav2016" >2016</a>
-    <a class="dropdown-item" id="Nav2017" >2017</a>
-    <a class="dropdown-item" id="Nav2018" >2018</a>
-    <a class="dropdown-item" id="Nav2019"  >2019</a>
-    <a class="dropdown-item" id="Nav2020" >2020</a>
-    <a class="dropdown-item" id="NavClick" >HOME</a>
-  </div>
-</li> --->
 <li>
   <a id="SPNG" href="https://nepmia.fr"><div data-tilt><img id="SPNGI" width="50" height="50" src="img/svg/SPNG.svg" style="transform: translateY(5px);"/></div></a>
  
 </li>
       </ul>
-    
-      <!-- /.Links -->
-  <!-- /.Collapsible content -->
 </nav>
-<!-- /.Navbar -->
 
 <!-- SideNav -->
 <div id="SideNav" class="SideNav-container vh-100 position-fixed sidenavL z-depth-1" style="width: 200px;"> 
   <div id="SideOff" class="ubuntuB text-right w-100" style="margin-left: -15px;font-size: 25px;">x</div>
 <div class="tw ubuntuB text-center">QUICKNAV </br></br></div>
-  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2016" >2016</a>
-  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2017" >2017</a>
-  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2018" >2018</a>
-  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2019"  >2019</a>
-  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2020" >2020</a>
-  <a class="dropdown-item uhere ubuntuB" id="NavClick" >HOME</a>
+  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2016" style="cursor: pointer;">2016</a>
+  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2017" style="cursor: pointer;">2017</a>
+  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2018" style="cursor: pointer;">2018</a>
+  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2019" style="cursor: pointer;">2019</a>
+  <a class="dropdown-item  ubuntuB hoverSN" id="Nav2020" style="cursor: pointer;">2020</a>
+  <div class="dropdown-item uhere ubuntuB" id="NavClick" style="cursor: pointer;">HOME</div>
 </div>
 <div class="container-fluid h-100 bgdh justify-content-center" id="bgd" style="pointer-events: none;width: 100% !important;height: 100% !important;"></div>
-<!-- /.SideNav -->
+
 
 <!-- DevAlert -->
 <div class="p-3 position-fixed d-flex flex-row-reverse devalertoff h-auto" id="devalert" style="z-index: 250;right: 0%;">
 <div class="d-flex justify-content-center rounded-lg primary-color z-depth-1" style="background-color: rgba(0,0,255,.5);z-index: 250;width: 900px;">
 <div class="align-self-center al p-3 ubuntu tw" style="text-align: center;">
-  <strong class="ubuntuB">Attention!</strong> This website is still in developpement, it's design and features could change at anymoment.
+  <strong class="ubuntuB">Attention!</strong> This website is still in developpement, its design and features could change at any moment.
   </div>
   <div class="btn secondary-color align-self-center rounded-lg" id="devalertbtn" data-tilt><span class="ubuntuB tw">OK</span></div>
 </div>
 </div>
-<!-- /.DevAlert-->
+
 
 <!-- Img Viewer -->
 <div class="img-viewer-container container-fluid h-100 d-none hidden justify-content-center" id="img-viewer">
-  <div id="dsuioff"class="img-viewer-closebtn ubuntuB">x</div>
-  <div class="img-viewer-sub d-flex justify-content-center align-self-center " style="width: 80%;height: 70%;">
-    <img src="" class="viewer-img s1 img-fluid align-self-center" id="viewer-img" style="width: 60% !important;">
+  <div class="img-viewer-sub d-flex justify-content-center align-self-center " style="width: 70%;height: 70%;">
+    <svg id="imgload" class="circle-loader visible" width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="15">
+  </svg>
+    <img src="" class="viewer-img s1 img-fluid align-self-center vi" id="viewer-img">
     </div>
 </div>
-<!-- /.Img Viewer -->
+<div id="antyc" class="anticopy d-none"></div>
+  <div id="dsuioff"class="img-viewer-closebtn ic hidden d-none">x</div>
+
+
 
 <!--- Content --->
+
+
+<!-- Main page titles -->
 <div class="container-fluid d-flex justify-content-center flex-column home1" >
  <div class="ubuntuB text-center tw" style="font-size: 70px;margin-top: 60px;text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.68);">- DSUI -</div>
  <div class="ubuntuLi text-center tw" style="font-size: 20px;">Select Year</div>
 </div>
 
+<!-- Maine page pans -->
 <div class="container-fluid d-flex ypc flex-wrap transparent" style="height: 75%;">
   <div class="year-picker-container z-depth-1 transparent" data-tilt="" style="width: 250px;height: 250px;overflow: hidden;">
-    <div class="year-picker-img" id="yp2016" style="background-image:url('{{url_for("static", filename="img/2016.jpg")}}');"></div>
+    <div class="year-picker-img" id="yp2016" style="background-image:url('{{url_for("static", filename="img/2016.jpg")}}');" ></div>
     <div class="ypt z-depth-1 trsY"><div class="year-picker-title ubuntuB">2016</br><p class="text-center  ubuntuLi">Discovery-Gen</p></div></div>
   </div>
 
   <div class="year-picker-container z-depth-1" data-tilt=""  style="width: 250px;height: 250px;overflow: hidden;">
-    <div class="year-picker-img" id="yp2017" style="background-image:url('{{url_for("static", filename="img/2017.jpg")}}');"></div>
+    <div class="year-picker-img" id="yp2017" style="background-image:url('{{url_for("static", filename="img/2017.jpg")}}');" ></div>
     <div class="ypt z-depth-1 trsY"><div class="year-picker-title ubuntuB">2017</br><p class="text-center ubuntuLi">Energyq-Gen</p></div></div>
   </div>
 
   <div class="year-picker-container z-depth-1" data-tilt=""  style="width: 250px;height: 250px;overflow: hidden;">
-    <div class="year-picker-img" id="yp2018" style="background-image:url('{{url_for("static", filename="img/2018.jpg")}}');"></div>
+    <div class="year-picker-img" id="yp2018" style="background-image:url('{{url_for("static", filename="img/2018.jpg")}}');" ></div>
     <div class="ypt z-depth-1 trsY"><div class="year-picker-title ubuntuB">2018</br><p class="text-center  ubuntuLi">N1 Gen, Evolution</p></div></div>
   </div>
 
   <div class="year-picker-container z-depth-1" data-tilt=""  style="width: 250px;height: 250px;overflow: hidden;">
-    <div class="year-picker-img" id="yp2019" style="background-image:url('{{url_for("static", filename="img/2019.jpg")}}');"></div>
+    <div class="year-picker-img" id="yp2019" style="background-image:url('{{url_for("static", filename="img/2019.jpg")}}');" ></div>
     <div class="ypt z-depth-1 trsY"><div class="year-picker-title ubuntuB">2019</br><p class="text-center  ubuntuLi">N2 Gen, SuperSonic</p></div></div>
     
   </div>
 
   <div class="year-picker-container z-depth-1" data-tilt=""  style="width: 250px;height: 250px;overflow: hidden;">
-    <div class="year-picker-img" id="yp2020" style="background-image:url('{{url_for("static", filename="img/2020.jpg")}}');"></div>
+    <div class="year-picker-img" id="yp2020" style="background-image:url('{{url_for("static", filename="img/2020.jpg")}}');" ></div>
     <div class="ypt z-depth-1 trsY"><div class="year-picker-title ubuntuB">2020</br><p class="text-center  ubuntuLi">N3 Gen, ionized</p></div></div>
   </div>
 </div>
@@ -151,7 +139,7 @@
 
 
 
-
+<!-- 2016 Container -->
  <div class="dsui-container 2016Container hidden d-none">
 <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
   {% for img in demilsez %}
@@ -163,6 +151,7 @@
 </div>
 </div>
 
+<!-- 2017 Container -->
 <div class="dsui-container 2017Container hidden d-none">
   <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
     {% for img in demildiset %}
@@ -175,6 +164,7 @@
 </div>
 
 
+<!-- 2018 Container -->
 <div class="dsui-container 2018Container hidden d-none">
   <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
     {% for img in demildihouit %}
@@ -187,7 +177,7 @@
 </div>
 
 
-
+<!-- 2019 Container -->
 <div class="dsui-container 2019Container hidden d-none">
   <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
     {% for img in demildineuf %}
@@ -200,7 +190,7 @@
 </div>
 
 
-
+<!-- 2020 Container -->
 <div class="dsui-container 2020Container hidden d-none">
   <div class="flex-wrap dsui-subcontainer flex-wrap-anim">
     {% for img in demilvin %}
@@ -212,6 +202,8 @@
 </div>
 </div>
 
+
+<!-- Content Index -->
 <div class="index">
 {% for img in all %}
 <div class="viewerindex d-none" id="{{img | replace(".jpg", "") | replace(".png", "") | replace(".gif", "") | replace(".mp4", "")}}_V" src="{{url_for("static", filename="all/" + img)}}"></div>
@@ -236,6 +228,5 @@
   <script type="text/javascript" src="js/tilt.js"></script>
   <!-- Main.js -->
   <script type="text/javascript" src="js/main.js"></script>
-
 </body>
 </html>
