@@ -8,7 +8,6 @@ app = Flask(__name__,
             template_folder='N3/template')
             
 @app.route('/')
-@app.route('/N3/')
 def dsuimain(name=None):
     all = os.listdir(os.path.join(app.static_folder, "all"))
     demilsez = os.listdir(os.path.join(app.static_folder, "demilsez"))
