@@ -1,5 +1,5 @@
 ## N3 G
-This app is a part of N3G suite.
+This app is a part of N3G suite. (N3 was depreciated and DSUI is the only N3 app made public atm, I'm still working on N4 which will be made to be an opensource suite.)
 
 # Design-UI
 N3G Portfolio service 
@@ -11,4 +11,4 @@ This version is only made for that and even if you looked in my code (which coul
 it was my first backend it explains all.
 
 ## NO ONLINE VERSION AVAILABLE
-I'm sorry! I will maybe take time to remake the uwsgi server, so anyone can to check DSUI n3 but for now this version is not optimized and very slow, plus it will make lot of requests on my server which will kill it as its perfs aren't very high, and I need it alive to do stuff :s
+I'm sorry! I will maybe take time to remake the uwsgi server, so anyone can check DSUI n3 but for now this version is not optimized and very slow, plus it will make lot of requests on my server which will kill it as its perfs aren't very high, and I need it alive to do stuff :s
