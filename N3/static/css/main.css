@@ -255,7 +255,9 @@ body{
     justify-content: center;
     margin-top: 5%;
 }
-
+.np{
+    margin: 5px 5px 0 5px;
+}
 
 
 .sidenavL{
@@ -267,7 +269,7 @@ body{
 .sidenavR{
     left:0px !important;
     top: 0%;
-    transition: 0.5s cubic-bezier(.77,.07,.71,.94);
+    transition: 0.3s cubic-bezier(.77,.07,.71,.94);
     z-index: 800;
 }
 .SideNav-container{
